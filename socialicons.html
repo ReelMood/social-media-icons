@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Icons</title>
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: filter 0.3s ease;
+        }
+        .social-icon.github {
+            filter: grayscale(100%) brightness(180%) contrast(80%);
+        }
+        .social-icon.github:hover {
+            filter: none;
+        }
+        .social-icon.dribbble,
+        .social-icon.linkedin {
+            filter: grayscale(100%);
+        }
+        .social-icon.dribbble:hover,
+        .social-icon.linkedin:hover {
+            filter: grayscale(0%);
+        }
+        
+        @media (max-width: 480px) {
+            .social-icons {
+                gap: 15px;
+            }
+            .social-icon {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="social-icons">
+        <a href="https://github.com" target="_blank">
+            <img src="https://github.com/fluidicon.png" alt="GitHub" class="social-icon github">
+        </a>
+        <a href="https://dribbble.com" target="_blank">
+            <img src="https://cdn.dribbble.com/assets/dribbble-ball-icon-4e54c54abecf8efe027abe6f8bc7794553b8abef3bdb49cd15797067cf80ca53.svg" alt="Dribbble" class="social-icon dribbble">
+        </a>
+        <a href="https://linkedin.com" target="_blank">
+            <img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" alt="LinkedIn" class="social-icon linkedin">
+        </a>
+    </div>
+</body>
+</html>
